@@ -1,0 +1,16 @@
+{
+  "name": "gulp-crx",
+  "version": "0.0.1",
+  "description": "Packe Chrome Extension in the pipeline.",
+  "homepage": "https://github.com/evanxd/gulp-crx",
+  "repository": "git://github.com/evanxd/gulp-crx.git",
+  "author": "Evan Tseng <itoyxd@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "gulpplugin",
+    "chrome"
+  ],
+  "bugs": {
+    "url": "https://github.com/evanxd/gulp-crx/issues"
+  }
+}
