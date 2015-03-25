@@ -3,6 +3,8 @@ gulp-crx
 
 Pack Chrome Extension in the pipeline.
 
+[![Build Status](https://travis-ci.org/PavelVanecek/gulp-crx.svg?branch=master)](https://travis-ci.org/PavelVanecek/gulp-crx)
+
 Usage
 -----
 
