@@ -1,3 +1,4 @@
+'use strict';
 
 var ChromeExtension = require('crx');
 var through = require('through2');
