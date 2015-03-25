@@ -1,16 +1,29 @@
 {
   "name": "gulp-crx",
-  "version": "0.0.1",
-  "description": "Packe Chrome Extension in the pipeline.",
+  "version": "0.0.2",
+  "description": "Pack Chrome Extension in the pipeline.",
   "homepage": "https://github.com/evanxd/gulp-crx",
   "repository": "git://github.com/evanxd/gulp-crx.git",
   "author": "Evan Tseng <itoyxd@gmail.com>",
   "license": "MIT",
+  "main": "index.js",
   "keywords": [
     "gulpplugin",
     "chrome"
   ],
   "bugs": {
     "url": "https://github.com/evanxd/gulp-crx/issues"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "crx": "^3.0.2",
+    "gulp-util": "^3.0.4",
+    "merge": "^1.2.0",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1"
   }
 }
