@@ -12,7 +12,7 @@ Pipe the folder with chrome extension source code into the plugin.
 
     var crx = require('gulp-crx');
 
-    gulp.task('crx', , function() {
+    gulp.task('crx', function() {
       return gulp.src('.')
         .pipe(crx({
           privateKey: fs.readFileSync('./certs/key', 'utf8'),
@@ -24,4 +24,4 @@ Pipe the folder with chrome extension source code into the plugin.
 Install
 -------
 
-    npm install gulp-crx --save-dev
+    npm install git+https://github.com/PavelVanecek/gulp-crx.git --save-dev
