@@ -30,6 +30,14 @@ module.exports = function(opt) {
             path: options.filename,
             contents: crxBuffer
           }))
+
+          if (options.updateXmlFilename) {
+            var xmlBuffer = crx.generateUpdateXML()
+            that.push(new gutil.File({
+              path: options.updateXmlFilename,
+              contents: xmlBuffer
+            }))
+          }
           done()
         })
         .catch(onError)

@@ -11,6 +11,7 @@ Usage
 Pipe the folder with chrome extension source code into the plugin.
 
     var crx = require('gulp-crx');
+    var manifest = require('manifest');
 
     gulp.task('crx', function() {
       return gulp.src('.')
@@ -25,3 +26,34 @@ Install
 -------
 
     npm install git+https://github.com/PavelVanecek/gulp-crx.git --save-dev
+
+Autoupdating
+------------
+
+See https://developer.chrome.com/extensions/autoupdate
+
+You can use `gulp-crx` to generate the `.xml` file too. Pass two more options:
+- `codebase`: The URL to final `.crx` file
+- `updateXmlFilename`: Name of the xml file.
+
+Example:
+
+    var crx = require('gulp-crx');
+    var manifest = require('manifest');
+
+    gulp.task('crx', ['prepackage'], function() {
+
+      // http://example.com/extension.crx
+      var codebase = manifest.codebase
+
+      var updateXmlFilename = 'update.xml'
+
+      return gulp.src('.')
+        .pipe(crx({
+          privateKey: fs.readFileSync('./certs/key', 'utf8'),
+          filename: manifest.name + '.crx',
+          codebase: codebase,
+          updateXmlFilename: updateXmlFilename
+        }))
+        .pipe(gulp.dest('./build'));
+    });
