@@ -1,6 +1,6 @@
 {
   "name": "gulp-crx",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Pack Chrome Extension in the pipeline.",
   "homepage": "https://github.com/evanxd/gulp-crx",
   "repository": "git://github.com/evanxd/gulp-crx.git",
