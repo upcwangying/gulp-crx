@@ -1,5 +1,5 @@
-gulp-crx
-========
+gulp-crx-pack
+=============
 
 Pack Chrome Extension in the pipeline.
 
@@ -25,7 +25,7 @@ Pipe the folder with chrome extension source code into the plugin.
 Install
 -------
 
-    npm install git+https://github.com/PavelVanecek/gulp-crx.git --save-dev
+    npm install gulp-crx-pack --save-dev
 
 Autoupdating
 ------------
