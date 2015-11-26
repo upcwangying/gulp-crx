@@ -10,7 +10,7 @@ Usage
 
 Pipe the folder with chrome extension source code into the plugin.
 
-    var crx = require('gulp-crx');
+    var crx = require('gulp-crx-pack');
     var manifest = require('manifest');
 
     gulp.task('crx', function() {
@@ -32,13 +32,13 @@ Autoupdating
 
 See https://developer.chrome.com/extensions/autoupdate
 
-You can use `gulp-crx` to generate the `.xml` file too. Pass two more options:
+You can use `gulp-crx-pack` to generate the `.xml` file too. Pass two more options:
 - `codebase`: The URL to final `.crx` file
 - `updateXmlFilename`: Name of the xml file.
 
 Example:
 
-    var crx = require('gulp-crx');
+    var crx = require('gulp-crx-pack');
     var manifest = require('manifest');
 
     gulp.task('crx', ['prepackage'], function() {
