@@ -21,7 +21,7 @@
     "crx": "^3.0.2",
     "gulp-util": "^3.0.4",
     "merge": "^1.2.0",
-    "through2": "^0.6.3"
+    "through2": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "^2.2.1"
