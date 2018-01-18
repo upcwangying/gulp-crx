@@ -24,6 +24,6 @@
     "through2": "^2.0.1"
   },
   "devDependencies": {
-    "mocha": "^4.0.1"
+    "mocha": "^5.0.0"
   }
 }
