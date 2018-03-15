@@ -11,10 +11,10 @@ Usage
 Pipe the folder with chrome extension source code into the plugin.
 
     var crx = require('gulp-crx-pack');
-    var manifest = require('./manifest.json');
+    var manifest = require('./extension-src/manifest.json');
 
     gulp.task('crx', function() {
-      return gulp.src('.')
+      return gulp.src('./extension-src')
         .pipe(crx({
           privateKey: fs.readFileSync('./certs/key', 'utf8'),
           filename: manifest.name + '.crx'
@@ -39,7 +39,7 @@ You can use `gulp-crx-pack` to generate the `.xml` file too. Pass two more optio
 Example:
 
     var crx = require('gulp-crx-pack');
-    var manifest = require('./manifest.json');
+    var manifest = require('./extension-src/manifest.json');
 
     gulp.task('crx', ['prepackage'], function() {
 
@@ -48,7 +48,7 @@ Example:
 
       var updateXmlFilename = 'update.xml'
 
-      return gulp.src('.')
+      return gulp.src('./extension-src')
         .pipe(crx({
           privateKey: fs.readFileSync('./certs/key', 'utf8'),
           filename: manifest.name + '.crx',
