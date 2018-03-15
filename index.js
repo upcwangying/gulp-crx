@@ -3,7 +3,8 @@
 var ChromeExtension = require('crx');
 var through = require('through2');
 var merge = require('merge');
-var gutil = require('gulp-util');
+var File = require('vinyl')
+var PluginError = require('plugin-error')
 
 module.exports = function(opt) {
 
@@ -20,20 +21,20 @@ module.exports = function(opt) {
 
     var onError = function(err) {
       console.error(err)
-      done(new gutil.PluginError('gulp-crx', err))
+      done(new PluginError('gulp-crx', err))
     }
 
     crx.load(file.path).then(function() {
       crx.pack()
         .then(function(crxBuffer) {
-          that.push(new gutil.File({
+          that.push(new File({
             path: options.filename,
             contents: crxBuffer
           }))
 
           if (options.updateXmlFilename) {
             var xmlBuffer = crx.generateUpdateXML()
-            that.push(new gutil.File({
+            that.push(new File({
               path: options.updateXmlFilename,
               contents: xmlBuffer
             }))

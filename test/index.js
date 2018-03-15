@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert');
-var gutil = require('gulp-util');
+var File = require('vinyl');
 var path = require('path');
 var crx = require('../');
 var fs = require('fs');
@@ -26,7 +26,7 @@ it('should create crx file', function(done) {
     done()
   })
 
-  stream.write(new gutil.File({
+  stream.write(new File({
     cwd: __dirname,
     base: __dirname,
     path: __dirname + '/extension'
@@ -59,7 +59,7 @@ it('should create xml file', function(done) {
     done()
   })
 
-  stream.write(new gutil.File({
+  stream.write(new File({
     cwd: __dirname,
     base: __dirname,
     path: __dirname + '/extension'
