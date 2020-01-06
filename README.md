@@ -3,6 +3,7 @@
 
 Pack Chrome Extension in the pipeline.
 
+![Travis (.org)](https://img.shields.io/travis/upcwangying/gulp-crx)
 [![npm (scoped)](https://img.shields.io/npm/v/@crxs/gulp-crx)](https://www.npmjs.com/package/@crxs/gulp-crx)
 
 Usage
