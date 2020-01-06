@@ -7,5 +7,6 @@ deploy:
   email: upcwangying@126.com
   api_key: $NPM_TOKEN
   skip_cleanup: true
+  edge: true # fix missing api_key
   on:
     tags: true
