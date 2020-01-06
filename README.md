@@ -1,16 +1,16 @@
-gulp-crx-pack
+@crxs/gulp-crx
 =============
 
 Pack Chrome Extension in the pipeline.
 
-[![Build Status](https://travis-ci.org/PavelVanecek/gulp-crx.svg?branch=master)](https://travis-ci.org/PavelVanecek/gulp-crx) [![npm version](https://badge.fury.io/js/gulp-crx-pack.svg)](https://badge.fury.io/js/gulp-crx-pack)
+[![npm (scoped)](https://img.shields.io/npm/v/@crxs/gulp-crx)](https://www.npmjs.com/package/@crxs/gulp-crx)
 
 Usage
 -----
 
 Pipe the folder with chrome extension source code into the plugin.
 
-    var crx = require('gulp-crx-pack');
+    var crx = require('@crxs/gulp-crx');
     var manifest = require('./extension-src/manifest.json');
 
     gulp.task('crx', function() {
@@ -25,20 +25,20 @@ Pipe the folder with chrome extension source code into the plugin.
 Install
 -------
 
-    npm install gulp-crx-pack --save-dev
+    npm install @crxs/gulp-crx --save-dev
 
 Autoupdating
 ------------
 
 See https://developer.chrome.com/extensions/autoupdate
 
-You can use `gulp-crx-pack` to generate the `.xml` file too. Pass two more options:
+You can use `@crxs/gulp-crx` to generate the `.xml` file too. Pass two more options:
 - `codebase`: The URL to final `.crx` file
 - `updateXmlFilename`: Name of the xml file.
 
 Example:
 
-    var crx = require('gulp-crx-pack');
+    var crx = require('@crxs/gulp-crx');
     var manifest = require('./extension-src/manifest.json');
 
     gulp.task('crx', ['prepackage'], function() {
